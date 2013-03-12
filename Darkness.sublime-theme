@@ -1,4 +1,13 @@
 [
+    // Bottom panel background
+    {
+        "class": "panel_control",
+        "layer0.texture": "Darkness/assets/sidebar-bg.png",
+        "layer0.inner_margin": [2, 2, 2, 2],
+        "layer0.opacity": 1.0,
+        "content_margin": [2, 3, 2, 1]
+    },
+
     {
         "class": "label_control",
         "color": [255, 255, 255],
