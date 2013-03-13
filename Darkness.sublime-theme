@@ -740,23 +740,34 @@
 // CODE COMPLETION DROPDOWN
 //
 
-    // popup_control
+    {
+        "class": "popup_control",
+        "content_margin": [2, 2],
+        "layer0.tint": [30, 30, 30],
+        "layer0.opacity": 1.0
+    },
     {
         "class": "auto_complete",
-        "row_padding": [2, 1],
-        "layer0.tint": [255, 255, 255],
-        "layer0.opacity": 1.0,
-        "dark_content": false
+        "row_padding": [4, 2]
     },
     {
         "class": "auto_complete_label",
-        "fg": [72, 72, 72, 255],
-        "match_fg": [0, 0, 0, 255],
-        "selected_fg": [72, 72, 72, 255],
-        "selected_match_fg": [0, 0, 0, 255]
+        "fg": [140, 140, 140],
+        "match_fg": [220, 220, 220],
+        "selected_fg": [180, 180, 180],
+        "selected_match_fg": [245, 245, 245]
     },
-    // table_row
-    // table_row selected
+    {
+        "class": "table_row",
+        "layer0.texture": "Darkness/assets/autocomplete-row-selected.png",
+        "layer0.opacity": 0.0,
+        "layer0.inner_margin": [3, 1]
+    },
+    {
+        "class": "table_row",
+        "attributes": ["selected"],
+        "layer0.opacity": 1.0
+    },
 
 //
 // BOTTOM PANEL BUTTONS
