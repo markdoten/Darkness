@@ -539,7 +539,7 @@
     // Tooltip container
     {
         "class": "tool_tip_control",
-        "layer0.texture": "Darkness/assets/tooltip.png", // TODO: Change
+        "layer0.texture": "Darkness/assets/tooltip.png",
         "layer0.inner_margin": [1, 1],
         "layer0.opacity": 0.95,
         "content_margin": [3, 3]
