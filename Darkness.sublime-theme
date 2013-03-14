@@ -369,9 +369,113 @@
 // STANDARD SCROLLBARS
 //
 
+    // Standard vertical scroll bar
+    {
+        "class": "scroll_bar_control",
+        "layer0.texture": "Darkness/assets/standard-scrollbar-vertical.png",
+        "layer0.opacity": 1.0,
+        "layer0.inner_margin": [2, 6],
+        "blur": false
+    },
+    // Standard horizontal scroll bar
+    {
+        "class": "scroll_bar_control",
+        "attributes": ["horizontal"],
+        "layer0.texture": "Darkness/assets/standard-scrollbar-horizontal.png",
+        "layer0.inner_margin": [6, 2],
+        "blur": false
+    },
+    // Standard scroll bar corner
+    {
+        "class": "scroll_corner_control",
+        "layer0.texture": "Darkness/assets/standard-scrollbar-corner.png",
+        "layer0.inner_margin": [2, 2],
+        "layer0.opacity": 1.0
+    },
+    // Standard vertical scroll puck
+    {
+        "class": "puck_control",
+        "layer0.texture": "Darkness/assets/standard-puck-vertical.png",
+        "layer0.opacity": 1.0,
+        "layer0.inner_margin": [0, 10],
+        "content_margin": [8, 12],
+        "blur": false
+    },
+    // Standard horizontal scroll puck
+    {
+        "class": "puck_control",
+        "attributes": ["horizontal"],
+        "layer0.texture": "Darkness/assets/standard-puck-horizontal.png",
+        "layer0.inner_margin": [10, 0],
+        "content_margin": [12, 8],
+        "blur": false
+    },
+
 //
 // OVERLAY SCROLLBARS
 //
+
+    // Overlay toggle scroll bar
+    {
+        "class": "scroll_area_control",
+        "settings": ["overlay_scroll_bars"],
+        "overlay": true
+    },
+    {
+        "class": "scroll_area_control",
+        "settings": ["!overlay_scroll_bars"],
+        "overlay": false
+    },
+    // Overlay vertical scroll bar
+    {
+        "class": "scroll_bar_control",
+        "settings": ["overlay_scroll_bars"],
+        "layer0.texture": "Darkness/assets/overlay-scrollbar-vertical.png",
+        "layer0.inner_margin": [0, 5],
+        "blur": true
+    },
+    // Overlay horizontal scroll bar
+    {
+        "class": "scroll_bar_control",
+        "settings": ["overlay_scroll_bars"],
+        "attributes": ["horizontal"],
+        "layer0.texture": "Darkness/assets/overlay-scrollbar-horizontal.png",
+        "layer0.inner_margin": [5, 0],
+        "blur": true
+    },
+    // Overlay vertical puck
+    {
+        "class": "puck_control",
+        "settings": ["overlay_scroll_bars"],
+        "layer0.texture": "Darkness/assets/overlay-puck-vertical.png",
+        "layer0.inner_margin": [0, 5],
+        "content_margin": [5, 20],
+        "blur": true
+    },
+    // Overlay horizontal puck
+    {
+        "class": "puck_control",
+        "settings": ["overlay_scroll_bars"],
+        "attributes": ["horizontal"],
+        "layer0.texture": "Darkness/assets/overlay-puck-horizontal.png",
+        "layer0.inner_margin": [5, 0],
+        "content_margin": [20, 5],
+        "blur": true
+    },
+    // Overlay light puck (for dark content)
+    {
+        "class": "puck_control",
+        "settings": ["overlay_scroll_bars"],
+        "attributes": ["dark"],
+        "layer0.texture": "Darkness/assets/overlay-dark-puck-vertical.png"
+    },
+    // Overlay light horizontal puck (for dark content)
+    {
+        "class": "puck_control",
+        "settings": ["overlay_scroll_bars"],
+        "attributes": ["horizontal", "dark"],
+        "layer0.texture": "Darkness/assets/overlay-dark-puck-horizontal.png"
+    },
 
 //
 // EMPTY WINDOW BACKGROUND
@@ -414,14 +518,37 @@
         "shadow_offset": [0, -1]
     },
     // Text field labels
+    {
+        "class": "label_control",
+        "parents": [{"class": "panel_control"}],
+        "shadow_color": [50, 50, 50],
+        "shadow_offset": [0, -1]
+    },
     // Button labels
+    {
+        "class": "label_control",
+        "parents": [{"class": "button_control"}],
+        "shadow_color": [55, 55, 55],
+        "shadow_offset": [0, -1]
+    },
 
 //
 // TOOLTIP
 //
 
     // Tooltip container
+    {
+        "class": "tool_tip_control",
+        "layer0.texture": "Darkness/assets/tooltip.png", // TODO: Change
+        "layer0.inner_margin": [1, 1],
+        "layer0.opacity": 0.95,
+        "content_margin": [3, 3]
+    },
     // Tooltip content
+    {
+        "class": "tool_tip_label_control",
+        "color": [0, 0, 0]
+    },
 
 //
 // STATUS BAR
@@ -441,6 +568,13 @@
         "min_size": [100, 0]
     },
     // Status bar label
+    {
+        "class": "label_control",
+        "parents": [{"class": "status_bar"}],
+        "color": [255, 255, 255],
+        "shadow_color": [25, 25, 25],
+        "shadow_offset": [0, -1]
+    },
 
 //
 // SIDE BAR
@@ -672,7 +806,16 @@
         "content_margin": [2, 3, 2, 1]
     },
     // Quick panel background
-    // Quick panel background (Retina fix)
+    {
+        "class": "overlay_control",
+        "layer0.texture": "Darkness/assets/quick-panel-background.png",
+        "layer0.inner_margin": [12, 6, 12, 15],
+        "layer0.opacity": 1.0,
+        "layer1.texture": "Darkness/assets/quick-panel-sections.png",
+        "layer1.inner_margin": [12, 40, 12, 19],
+        "layer1.opacity": 1.0,
+        "content_margin": [11, 8, 11, 17]
+    },
 
 //
 // QUICK PANEL
